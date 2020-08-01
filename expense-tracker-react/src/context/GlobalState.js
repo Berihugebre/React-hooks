@@ -11,12 +11,6 @@ export const GlobalContext = createContext(initialState)
 export const GlobalContextProvider =({children})=> {
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
-    // Actions
-       
-
-
-       
-
    return (
     <GlobalContext.Provider value={{transactions:state.transactions, dispatch}}>
         {children}
